@@ -19,3 +19,9 @@ def read_sumar(num1: int = 0, num2: int = 0):
     return  {
         "result": calc.sumar(num1, num2)
     }
+
+@app.get("/hello-world")
+def read_sumar():
+    return  {
+        "result": "Hello World"
+    }
