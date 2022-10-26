@@ -19,3 +19,16 @@ def read_sumar(num1: int = 0, num2: int = 0):
     return  {
         "result": calc.sumar(num1, num2)
     }
+
+@app.get("/restar")
+def read_restar(num1: int = 0, num2: int = 0):
+    return  {
+        "result": calc.restar(num1, num2)
+    }
+
+
+@app.get("/dividir")
+def read_restar(num1: int = 0, num2: int = 0):
+    return  {
+        "result": calc.divide(num1, num2)
+    }

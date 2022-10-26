@@ -3,7 +3,9 @@ from fastapi.testclient import TestClient
 from pytest_bdd import scenario, given, when, then, parsers, scenarios
 import parse
 
-scenarios('Sumar.feature')
+scenarios('Restar.feature')
+# scenarios('Dividir.feature')
+
 
 @given("que quiero realizar operaciones aritméticas", target_fixture="api_client")
 def step_impl():
@@ -16,10 +18,9 @@ def step_impl():
    target_fixture="calc_result",
 )
 def step_impl(api_client, operacion, num1, num2):
-    api_result = api_client.get(f'sumar?num1={num1}&num2={num2}')
+    api_result = api_client.get(f'{operacion}?num1={num1}&num2={num2}')
     assert 200 == api_result.status_code
     return api_result.json().get('result')
-
 
 
 @then(parsers.cfparse("el resultado debe ser {result}"))

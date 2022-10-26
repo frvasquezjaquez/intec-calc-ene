@@ -12,3 +12,4 @@ Feature: Restar dos numeros
         | restar    | 100  | 300  | -200    |
         | restar    | 400  | 50   | 350     |
         | restar    | 1    | -1   | Invalid |
+        | restar    | 10   | 5    | 5 |

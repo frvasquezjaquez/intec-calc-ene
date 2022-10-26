@@ -3,12 +3,12 @@ from calc import Calc
 from pytest_bdd import scenario, given, when, then, parsers, scenarios
 import parse
 
-scenarios('Sumar.feature')
+# scenarios('Sumar.feature')
 scenarios('Restar.feature')
-scenarios('Multiplicar.feature')
-scenarios('Dividir.feature')
-scenarios('Power.feature')
-scenarios('Residuo.feature')
+# scenarios('Multiplicar.feature')
+# scenarios('Dividir.feature')
+# scenarios('Power.feature')
+# scenarios('Residuo.feature')
 
 
 @given("que quiero realizar operaciones aritméticas", target_fixture="calc")
